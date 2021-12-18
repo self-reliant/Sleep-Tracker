@@ -45,6 +45,7 @@ interface SleepDatabaseDao {
      *
      * @param key startTimeMilli to match
      */
+    // gets the night by its key
     @Query("SELECT * from daily_sleep_quality_table WHERE nightId = :key")
     suspend fun get(key: Long): SleepNight?
 
